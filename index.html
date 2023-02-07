@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru" class="noscroll">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Meal</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-container">
+                <div class="header__inner">
+                    <div class="header__bg"></div>
+                    <div class="header__top">
+                        <a href="#" class="logo-link"><img src="./img/logo.svg" alt="YourMeal" class="logo-pic"></a>
+                    </div>
+                    <div class="header__offer-body">
+                        <div class="header__offer-pic-body">
+                            <img src="./img/header/burger-pic.svg" alt="Burger" class="header__offer-pic">
+                        </div>
+                        <div class="header__offer">
+                            <h1 class="header__title">
+                                Только самые <span>сочные бургеры!</span>
+                            </h1>
+                            <p class="header__subtitle">
+                                Бесплатная доставка от 599₽
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="page">
+            <section class="category">
+                <div class="category__container">
+                    <div class="category__slider-container">
+                        <button class="btn-sldier-prev">&#8592;</button>
+                        <div class="category__slider-track">
+                            <button class="category__slider-item category__slider-item-active"><img src="./img/icons/burger.png" alt="Бургеры" class="assortment-pic">Бургеры</button>
+                            <button class="category__slider-item"><img src="./img/icons/snacks.png" alt="Закуски" class="assortment-pic">Закуски</button>
+                            <button class="category__slider-item"><img src="./img/icons/hotdogs.png" alt="Хот-доги" class="assortment-pic">Хот-доги</button>
+                            <button class="category__slider-item"><img src="./img/icons/combo.png" alt="Комбо" class="assortment-pic">Комбо</button>
+                            <button class="category__slider-item"><img src="./img/icons/shawarma.png" alt="Шаурма" class="assortment-pic">Шаурма</button>
+                            <button class="category__slider-item"><img src="./img/icons/wok.png" alt="Вок" class="assortment-pic">Вок</button>
+                            <button class="category__slider-item"><img src="./img/icons/desserts.png" alt="Десерты" class="assortment-pic">Десерты</button>
+                            <button class="category__slider-item"><img src="./img/icons/souces.png" alt="Соусы" class="assortment-pic">Соусы</button>
+                        </div>
+                        <button class="btn-slider-next">&#8594;</button>
+                    </div>
+                    <div class="assortment__slider-btns">
+                        <button class="btn-sldier-prev">&#8592;</button>
+                        <button class="btn-slider-next">&#8594;</button>
+                    </div>
+                </div>
+            </section>
+            <section class="main-part">
+                <section class="section-cart">
+                    <div class="body-cart-container">
+                        <div class="cart__inner">
+                            <div class="cart-header">
+                                <h3 class="cart-header-title">Корзина</h3>
+                                <p class="cart-goods">4</p>
+                            </div>
+                            <div class="cart__body">
+                                <div class="cart-card">
+                                    <img src="./img/cart/Rectangle 2-1.jpg" alt="" class="card-pic">
+                                    <div class="about-good">
+                                        <h4 class="cart-card-title">Супер сырный</h4>
+                                        <p class="cart-card-weight">512г</p>
+                                        <p class="cart-card-price">550₽</p>
+                                    </div>
+                                    <div class="cart-card-setting">
+                                        <button class="cart-card-minus">-</button>
+                                        <p class="cart-card-quanity">1</p>
+                                        <button class="cart-card-minus cart-card-plus">+</button>
+                                    </div>
+                                </div>
+                                <div class="cart-card">
+                                    <img src="./img/cart/Rectangle 2-1.jpg" alt="" class="card-pic">
+                                    <div class="about-good">
+                                        <h4 class="cart-card-title">Супер сырный</h4>
+                                        <p class="cart-card-weight">512г</p>
+                                        <p class="cart-card-price">550₽</p>
+                                    </div>
+                                    <div class="cart-card-setting">
+                                        <button class="cart-card-minus">-</button>
+                                        <p class="cart-card-quanity">1</p>
+                                        <button class="cart-card-minus cart-card-plus">+</button>
+                                    </div>
+                                </div>
+                                <div class="cart-card">
+                                    <img src="./img/cart/Rectangle 2-1.jpg" alt="" class="card-pic">
+                                    <div class="about-good">
+                                        <h4 class="cart-card-title">Супер сырный</h4>
+                                        <p class="cart-card-weight">512г</p>
+                                        <p class="cart-card-price">550₽</p>
+                                    </div>
+                                    <div class="cart-card-setting">
+                                        <button class="cart-card-minus">-</button>
+                                        <p class="cart-card-quanity">1</p>
+                                        <button class="cart-card-minus cart-card-plus">+</button>
+                                    </div>
+                                </div>
+                                <div class="cart-bottom">
+                                    <div class="cart-price">
+                                        <p class="thesum">Итого</p>
+                                        <p class="theprice">1279₽</p>
+                                    </div>
+                                    <button class="btn-cart-order">Оформить заказ</button>
+                                    <div class="freedelivery">
+                                        <img src="./img/icons/delivery.png" alt="" class="freedelivery-icon">
+                                        <p class="free-delivery-text">
+                                            Бесплатная доставка
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section-cards">
+                    <div class="cards__container">
+                        <div class="cards__inner">
+                            <h2 class="section-title">Бургеры</h2>
+                            <div class="cards-body">
+                                <div class="card">
+                                    <img src="./img/cards/burger/burger1.jpg" alt="" class="card-pic">
+                                    <p class="card-price">689₽</p>
+                                    <h3 class="card-name">Мясная бомба</h3>
+                                    <p class="card-weight">520г</p>
+                                    <button class="addtocart">Добавить</button>
+                                </div>
+                                <div class="card">
+                                    <img src="./img/cards/burger/burger1.jpg" alt="" class="card-pic">
+                                    <p class="card-price">689₽</p>
+                                    <h3 class="card-name">Мясная бомба</h3>
+                                    <p class="card-weight">520г</p>
+                                    <button class="addtocart">Добавить</button>
+                                </div>
+                                <div class="card">
+                                    <img src="./img/cards/burger/burger1.jpg" alt="" class="card-pic">
+                                    <p class="card-price">689₽</p>
+                                    <h3 class="card-name">Мясная бомба</h3>
+                                    <p class="card-weight">520г</p>
+                                    <button class="addtocart">Добавить</button>
+                                </div>
+                                <div class="card">
+                                    <img src="./img/cards/burger/burger1.jpg" alt="" class="card-pic">
+                                    <p class="card-price">689₽</p>
+                                    <h3 class="card-name">Мясная бомба</h3>
+                                    <p class="card-weight">520г</p>
+                                    <button class="addtocart">Добавить</button>
+                                </div>
+                                <div class="card">
+                                    <img src="./img/cards/burger/burger1.jpg" alt="" class="card-pic">
+                                    <p class="card-price">689₽</p>
+                                    <h3 class="card-name">Мясная бомба</h3>
+                                    <p class="card-weight">520г</p>
+                                    <button class="addtocart">Добавить</button>
+                                </div>
+                                <div class="card">
+                                    <img src="./img/cards/burger/burger1.jpg" alt="" class="card-pic">
+                                    <p class="card-price">689₽</p>
+                                    <h3 class="card-name">Мясная бомба</h3>
+                                    <p class="card-weight">520г</p>
+                                    <button class="addtocart">Добавить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__contaner">
+                <div class="footer__inner">
+                    <div class="footer-left">
+                        <a href="#" class="footer-logo">
+                            <img src="./img/footer-logo.svg" alt="Ypur Meal" class="footer-logo-pic">
+                        </a>
+                        <p class="copytightanddesign">
+                            © YouMeal, 2022 <br>  Design: Anastasia Ilina
+                        </p>
+                    </div>
+                    <div class="footer-right">
+                        <div class="footer-contact">
+                            <p class="number">Номер для заказа</p>
+                            <a href="#" type="tel:+7(930)833-38-11" class="nubmer-phone"><img src="./img/icons/Call.png" alt="" class="numphone-pic"><p>+7(930)833-38-11</p></a>
+                        </div>
+                        <div class="social-media">
+                            <p class="socmed-title">Мы в соцсетях</p>
+                            <a href="#" class="socmed-link"><img src="./img/social/Vector.svg" alt="" class="socmed-link-pic"></a>
+                            <a href="#" class="socmed-link"><img src="./img/social/Vector-1.svg" alt="" class="socmed-link-pic"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="checkout-window">
+            <button class="close-checkout-window">
+                <img src="./img/icons/close.svg" alt="" class="close-window-pic">
+            </button>
+            <div class="checkout-window__container">
+                <div class="checkout-window-donut">
+                    <img src="./img/donut.svg" alt="" class="donut">
+                </div>
+                <div class="checkout-window-form">
+                    <h2 class="delivery">Доставка</h2>
+                    <form action="#" class="delivery-form">
+                        <input type="text" class="inputform" name="name" value="" placeholder="Ваше имя">
+                        <input type="tel" class="inputform" name="phone" value="" placeholder="Телефон">
+                        <div class="delivery-or-pickup">
+                            <div class="inputfirst">
+                                <input type="radio" name="delivery-or-pickup" checked value="pickup">
+                                <p class="delivery-or-pickup-radio">Самовывоз</p>
+                            </div>
+                            <div class="inputfirst">
+                                <input type="radio" name="delivery-or-pickup" value="delivery">
+                                <p class="delivery-or-pickup__radio">Доставка</p>
+                            </div>
+                        </div>
+                        <div class="checkout-window-continue-delivery-checked">
+                            <input type="text" class="inputform" placeholder="Улица, дом, квартира">
+                            <div class="checkout-window-continue-delivery-two">
+                                <input type="text" class="inputform short-input" placeholder="Этаж">
+                                <input type="text" class="inputform short-input" placeholder="Домофон">
+                            </div>
+                        </div>
+                        <button class="order-form" type="submit">Оформить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="checkout-window">
+            <button class="close-checkout-window">
+                <img src="./img/icons/close.svg" alt="" class="close-window-pic">
+            </button>
+            <div class="checkout-window__container">
+                <div class="checkout-window-donut">
+                    <img src="./img/donut.svg" alt="" class="donut">
+                </div>
+                <div class="checkout-window-form">
+                    <h2 class="delivery">Доставка</h2>
+                    <form action="#" class="delivery-form">
+                        <input type="text" class="inputform" name="name" value="" placeholder="Ваше имя">
+                        <input type="tel" class="inputform" name="phone" value="" placeholder="Телефон">
+                        <div class="delivery-or-pickup">
+                            <div class="inputfirst">
+                                <input type="radio" name="delivery-or-pickup" value="pickup">
+                                <p class="delivery-or-pickup-radio">Самовывоз</p>
+                            </div>
+                            <div class="inputfirst">
+                                <input type="radio" name="delivery-or-pickup" checked value="delivery">
+                                <p class="delivery-or-pickup__radio">Доставка</p>
+                            </div>
+                        </div>
+                        <div class="checkout-window-continue-delivery">
+                            <input type="text" class="inputform" placeholder="Улица, дом, квартира">
+                            <div class="checkout-window-continue-delivery-two">
+                                <input type="text" class="inputform short-input" placeholder="Этаж">
+                                <input type="text" class="inputform short-input" placeholder="Домофон">
+                            </div>
+                        </div>
+                        <button class="order-form" type="submit">Оформить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="product-descr">
+            <div class="product-descr-container">
+                <button class="close-window">
+                    <img src="./img/icons/close.svg" alt="" class="close-window-pic">
+                </button>
+                <h2 class="product-descr-title">Мясная бомба</h2>
+                <div class="product-descr-body">
+                    <img src="./img/cards/burger/burger1.jpg" alt="" class="product-descr-img">
+                    <div class="poduct-descr-main">
+                        <p class="product-descr-text">
+                            Супер мясное наслаждение! Большая рубленая котлета из свежего говяжего мяса покорит вас своей сочностью, а хрустящие листья салата добавят свежести.
+                        </p>
+                        <h3 class="composition">
+                            Состав:
+                            <ul class="composition-list">
+                                <li>Пшеничная булочка</li>
+                                <li>Котлета из говядины</li>
+                                <li>Красный лук</li>
+                                <li>Листья салата</li>
+                                <li>Соус горчичный</li>
+                                <li class="kcal">520г, ккал 430</li>
+                            </ul>
+                        </h3>
+                    </div>
+                </div>
+                <div class="product-descr-btns">
+                    <div class="btns">
+                        <button class="addtocart window">Добавить</button>
+                        <div class="cart-card-setting">
+                            <button class="cart-card-minus">-</button>
+                            <p class="cart-card-quanity">1</p>
+                            <button class="cart-card-minus cart-card-plus">+</button>
+                        </div>
+                    </div>
+                    <p class="price-window">689₽</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
