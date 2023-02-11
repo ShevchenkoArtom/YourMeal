@@ -404,7 +404,9 @@ html {
 .cart__body {
 }
 
-
+/* .cart-wrapper {
+    transition: .3s ease-in-out all;
+} */
 .cart-card {
     display: flex;
     justify-content: space-between;
@@ -412,8 +414,17 @@ html {
     border-top: 1px solid #F2F2F3;
     border-bottom: 1px solid #F2F2F3;
 }
-.card-pic {
+.cartisempty.notEmpty {
+    display: none;
+}
+.card-pic2 {
     border-radius: 8px;
+    margin-bottom: 16px;
+}
+.cart-pic {
+    border-radius: 8px;
+    max-width: 64px;
+    max-height: 64px;
 }
 .about-good {
 }
@@ -443,9 +454,21 @@ html {
     line-height: 22px;
     padding: 9px 12px 9px 12px;
     border-radius: 12px 0 0 12px ;
+    transition: .2s ease-in-out all;
+    cursor: pointer;
+    background-color: #F2F2F3;
+
+    -webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 .cart-card-minus.cart-card-plus {
     border-radius: 0px 12px 12px 0px;
+}
+.cart-card-minus:hover {
+    background-color: #F86310;
 }
 .cart-card-quanity {
     /* padding: 9px 15px; */
