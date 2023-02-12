@@ -14,20 +14,10 @@ window.addEventListener('click', function(event){
             // itemsInBox: card.querySelector('[data-items-in-box]').innerText,
             weight: card.querySelector('.card-weight').innerText,
             price: card.querySelector('.card-price').innerText,
-            // counter: card.querySelector('[data-counter]').innerText,
-            counter: 1,
+            counter: card.querySelector('[data-counter]').innerText,
         };
 
-        // Проверка наличия такого же товара в корзине
-        const itemInCart = cartWrapper.querySelector(`[data-id="${productInfo.id}"]`);
-        if (itemInCart) {
-            const counterElement = itemInCart.querySelector('[data-counter]');
-            counterElement.innerText = parseInt(counterElement.innerText) + parseInt(productInfo.counter);
-            // document.querySelector('cartisempty').classList.add('notEmpty');
-            // console.log(this.document.querySelector('cartisempty').classList.add('notEmpty'))
-        } else {
-            // Если нет в корзине
-            const cartItemHTML = `<div class="cart-card" data-id="${productInfo.id}">
+        const cartItemHTML = `<div class="cart-card" data-id="${productInfo.id}">
                                 <img src="${productInfo.imgSrc}" alt="" class="cart-pic">
                                 <div class="about-good">
                                     <h4 class="cart-card-title">${productInfo.title}</h4>
@@ -40,21 +30,8 @@ window.addEventListener('click', function(event){
                                     <button class="cart-card-minus cart-card-plus" data-action="plus">+</button>
                                 </div>
                             </div>`;
-            // Отобразим товар в корзине
-            cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
 
-
-
-        };
-
-        // Сброс счетскиа после добавки в корзину на 1
-        // card.querySelector('[data-counter]').innerText = 1;
-        
-        
-        // Отображение статуса корзины
-        toggleCartStatus();
-
-        calcCartPriceAndDelivery ();
-        
+        // Отобразим товар в корзине
+        cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
     };
 });

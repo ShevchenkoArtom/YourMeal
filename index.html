@@ -44,14 +44,14 @@
                     <div class="category__slider-container">
                         <button class="btn-sldier-prev">&#8592;</button>
                         <div class="category__slider-track">
-                            <button class="category__slider-item category__slider-item-active"><img src="./img/icons/burger.png" alt="Бургеры" class="assortment-pic">Бургеры</button>
-                            <button class="category__slider-item"><img src="./img/icons/snacks.png" alt="Закуски" class="assortment-pic">Закуски</button>
-                            <button class="category__slider-item"><img src="./img/icons/hotdogs.png" alt="Хот-доги" class="assortment-pic">Хот-доги</button>
-                            <button class="category__slider-item"><img src="./img/icons/combo.png" alt="Комбо" class="assortment-pic">Комбо</button>
+                            <div data-tab="tab-1" class="category__slider-item category__slider-item-active"><img src="./img/icons/burger.png" alt="Бургеры" class="assortment-pic">Бургеры</div>
+                            <div data-tab="tab-2" class="category__slider-item"><img src="./img/icons/snacks.png" alt="Закуски" class="assortment-pic">Закуски</div>
+                            <div data-tab="tab-3" class="category__slider-item"><img src="./img/icons/hotdogs.png" alt="Хот-доги" class="assortment-pic">Хот-доги</div>
+                            <!-- <button class="category__slider-item"><img src="./img/icons/combo.png" alt="Комбо" class="assortment-pic">Комбо</button>
                             <button class="category__slider-item"><img src="./img/icons/shawarma.png" alt="Шаурма" class="assortment-pic">Шаурма</button>
                             <button class="category__slider-item"><img src="./img/icons/wok.png" alt="Вок" class="assortment-pic">Вок</button>
                             <button class="category__slider-item"><img src="./img/icons/desserts.png" alt="Десерты" class="assortment-pic">Десерты</button>
-                            <button class="category__slider-item"><img src="./img/icons/souces.png" alt="Соусы" class="assortment-pic">Соусы</button>
+                            <button class="category__slider-item"><img src="./img/icons/souces.png" alt="Соусы" class="assortment-pic">Соусы</button> -->
                         </div>
                         <button class="btn-slider-next">&#8594;</button>
                     </div>
@@ -62,12 +62,14 @@
                 </div>
             </section>
             <section class="main-part">
-                <section class="section-cart">
+                <section class="section-cart none">
                     <div class="body-cart-container">
                         <div class="cart__inner">
                             <div class="cart-header">
                                 <h3 class="cart-header-title">Корзина</h3>
-                                <p class="cart-goods" data-counter="">4</p>
+                                <div class="cart-goods">
+                                    <p data-counter="">0</p>
+                                </div>
                             </div>
                             <div class="cart__body">
                                 <div class="cartisempty">
@@ -77,13 +79,13 @@
                                     
                                 </div>
 
-                                <div class="cart-bottom">
+                                <div class="cart-bottom none">
                                     <div class="cart-price">
                                         <p class="thesum">Итого</p>
-                                        <p class="theprice">1279₽</p>
+                                        <div><p class="theprice">0</p> <span>₽</span></div>
                                     </div>
                                     <button class="btn-cart-order">Оформить заказ</button>
-                                    <div class="freedelivery">
+                                    <div class="freedelivery ">
                                         <img src="./img/icons/delivery.png" alt="" class="freedelivery-icon">
                                         <p class="free-delivery-text">
                                             Бесплатная доставка
@@ -96,7 +98,7 @@
                 </section>
                 <section class="section-cards">
                     <div class="cards__container">
-                        <div class="cards__inner">
+                        <div id="tab-1" class="cards__inner">
                             <h2 class="section-title">Бургеры</h2>
                             <div class="cards-body">
                                 <div class="card" data-id="01">
@@ -142,6 +144,58 @@
                                     <button class="addtocart" data-cart >Добавить</button>
                                 </div>
                                 
+                            </div>
+                        </div>
+                        <div id="tab-2" class="cards__inner hidden">
+                            <h2 class="section-title">Закуски</h2>
+                            <div class="cards-body">
+                                <div class="card" data-id="07">
+                                    <img src="./img/cards/snacks/photo.jpg" alt="" class="card-pic2">
+                                    <p class="card-price">250₽</p>
+                                    <h3 class="card-name">Начос</h3>
+                                    <p class="card-weight">220г</p>
+                                    <button class="addtocart" data-cart >Добавить</button>
+                                </div>
+                                <div class="card" data-id="08">
+                                    <img src="./img/cards/snacks/photo-1.jpg" alt="" class="card-pic2">
+                                    <p class="card-price">245₽</p>
+                                    <h3 class="card-name">Картошка фри</h3>
+                                    <p class="card-weight">180г</p>
+                                    <button class="addtocart" data-cart >Добавить</button>
+                                </div>
+                                <div class="card" data-id="09">
+                                    <img src="./img/cards/snacks/photo-2.jpg" alt="" class="card-pic2">
+                                    <p class="card-price">230₽</p>
+                                    <h3 class="card-name">Луковые кольца</h3>
+                                    <p class="card-weight">160г</p>
+                                    <button class="addtocart" data-cart >Добавить</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-3" class="cards__inner hidden">
+                            <h2 class="section-title">Хот-доги</h2>
+                            <div class="cards-body">
+                                <div class="card" data-id="10">
+                                    <img src="./img/cards/hotdogs/photo.jpg" alt="" class="card-pic2">
+                                    <p class="card-price">290₽</p>
+                                    <h3 class="card-name">Домашний хот-дог</h3>
+                                    <p class="card-weight">250г</p>
+                                    <button class="addtocart" data-cart >Добавить</button>
+                                </div>
+                                <div class="card" data-id="11">
+                                    <img src="./img/cards/hotdogs/photo-1.jpg" alt="" class="card-pic2">
+                                    <p class="card-price">239₽</p>
+                                    <h3 class="card-name">Жгучий хот-дог</h3>
+                                    <p class="card-weight">245г</p>
+                                    <button class="addtocart" data-cart >Добавить</button>
+                                </div>
+                                <div class="card" data-id="12">
+                                    <img src="./img/cards/hotdogs/photo-2.jpg" alt="" class="card-pic2">
+                                    <p class="card-price">220₽</p>
+                                    <h3 class="card-name">Классический хот-дог</h3>
+                                    <p class="card-weight">215г</p>
+                                    <button class="addtocart" data-cart >Добавить</button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -282,9 +336,11 @@
             </div>
         </div>
     </div>
+    <script src="./js/calcCartProce.js"></script>
     <script src="./js/toggleCartStatus.js"></script>
     <script src="./js/cart-02.js"></script>
     <script src="./js/counter-02.js"></script>
+    <script src="./js/tabs.js"></script>
     <script src="./js/script.js"></script>
 </body>
 
