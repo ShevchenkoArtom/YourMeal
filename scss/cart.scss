@@ -1,0 +1,177 @@
+// .cards__section {
+//     position: relative;
+// }
+
+
+.shopping__cart {
+    display: block;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+    width: 300px;
+    max-height: 80vh;
+    margin-right: 30px;
+    padding: 16px 10px;
+    background-color: $white;
+    border-radius: 12px;
+    color: $black;
+    margin-top: 86px;
+    top: 0;
+    position: absolute;
+    z-index: 11;
+    &.scrolled {
+        position: fixed;
+        top: 0;
+    }
+    .cart__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2 {     
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 100%;
+        }
+        p {
+            font-size: 10px;
+            padding: 1px 13px;
+            padding-top: 3px;
+            align-items: center;
+            text-align: center;
+            border-radius: 6px;
+            background: #F2F2F3;
+        }
+    }
+    .cart__middle {
+        margin-top: 8px;
+        overflow-y: auto;
+        max-height: calc(70vh - 180px);
+        
+        width: 100%;
+        &::-webkit-scrollbar {
+            width: 10px;
+          }
+        .cart__item {
+            padding: 10px 0;
+            border-top: 1px solid #F2F2F3;
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            align-items: center;
+            &-left {
+                display: flex;
+            }
+            img {
+                width: 64px;
+                height: 52px;
+                margin-right: 6px;
+                border-radius: 8px;
+            }
+            &-title {
+                margin-bottom: 2px;
+            }
+            &-weight {
+                margin-bottom: 10px;
+                color: #B1B1B1;
+            }
+        }
+    }
+    .cart__bottom {
+        padding-top: 13px;
+        border-top: 1px solid #F2F2F3;
+        text-align: center;
+        .cart__price {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            line-height: 130%;
+            font-size: 12px;
+        }
+        .orderBtn {
+            padding: 9px 32px;
+            color: #FFF;
+            font-size: 12px;
+            border-radius: 8px;
+            background: #FF7020;
+            width: 100%;
+            display: block;
+            cursor: pointer;
+            &:hover {
+                background: $yellow;
+            }
+        }
+        .delivery {
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            align-items: center;
+            .freeDelivery {
+                padding-left: 32px;
+                background-image: url("../img/assortment/webp/delivery.webp");
+                background-size: 24px;
+                background-repeat: no-repeat;
+                background-position: left center;
+                height: 24px;
+                padding-top: 8px;
+            }
+            .close {
+                color: #B1B1B1;
+                cursor: pointer;
+                &:hover {
+                    color: $black;
+                }
+            }
+        }
+    }
+}
+.emptyCart {
+    display: none;
+}
+
+.cards__body {
+    margin-top: 30px;
+    position: relative;
+}
+@media (max-width:768px) {
+    .shopping__cart.close {
+        width: 125px;
+        position: static;
+        margin-top: 0;
+        padding: 16px 10px;
+        .cart {
+            &__top {
+                h2 {
+                    font-size: 16px;
+                }
+                p {font-size: 10px;}
+            }
+            &__middle {
+                display: none;
+            }
+            &__bottom {
+                display: none;
+            }
+        }
+    }
+    .cards__body{
+        // max-width: 125px;
+        // position: static;
+        margin-top: 0;
+    }
+    .shopping__cart {
+        top: -100px;
+        left: 10px;
+    }
+}
+
+@media (max-width:425px) {
+    .shopping__cart.close {
+        min-width: 100%;
+    }
+    .shopping__cart {
+        min-width: 96%;
+        max-height: 100%;
+        // .cart__middle {
+        //     width: calc(100vh - 200px);
+        // }
+    }
+}

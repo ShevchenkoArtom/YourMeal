@@ -1,0 +1,99 @@
+.footer {
+    margin-top: 100px;
+    background-color: #fff;
+    padding: 45px 0;
+    &__container {
+        max-width: 1174px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    &__inner {
+    }
+    &__top {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 45px;
+        .footer__logo {
+            width: 45%;
+        }
+        &-wrap {
+            display: none;
+        }
+    }
+    .contact {
+        max-width: 100%;
+        margin: 0 0 0 auto;
+        h2 {
+            color: #000;
+            font-size: 24px;
+            line-height: 100%; /* 24px */
+            margin-bottom: 22px;
+            >& {
+                margin-bottom: 25px;
+            }
+        }
+        a {
+            color: #000;
+            font-size: 16px;
+            line-height: 130%;
+            img {
+                margin-right: 16px;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .copyright {
+        margin-top: 45px;
+    }
+}
+
+@media (max-width:768px) {
+    .footer {
+        &__logo img{
+            width: 196px;
+        }
+        &__top {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 45px;
+            >.contact {
+                display: none;
+            }
+            .footer__logo {
+                width: 45%;
+            }
+            &-wrap {
+                display: flex;
+                max-width: 100%;
+                margin: 45px auto 0 0;
+                .contact {
+                    margin-right: 20vw;
+                    h2 {
+                        font-size: 18px;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:425px) {
+    .footer {
+        &__top {
+            &-wrap {
+                flex-direction: column;
+                .contact {
+                    margin: 0;
+                    margin-bottom: 24px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

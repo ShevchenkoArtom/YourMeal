@@ -1,0 +1,37 @@
+$yellow: #FFAB08;
+$black: #000000;
+$orange: #FF7020;
+$white: #fff;
+
+%transition {
+    transform: ease-in .3s all;
+}
+
+%usualText {
+    color: $black;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F3;
+    max-height: 30px;
+    border-radius: 8px;
+    &__count {
+        padding: 0 10px;
+    }
+    &Btn {
+        cursor: pointer;
+        padding: 6px 8px;
+        border-radius: 8px 0 0 8px;
+        &:hover {
+            background-color: #c6c6c7;
+        }
+    }
+    .counterPlus {
+        border-radius: 0 8px 8px 0;
+    }
+}
