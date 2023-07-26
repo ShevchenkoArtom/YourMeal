@@ -125,6 +125,10 @@ let tab = function () {
 
 tab();
 
+document.getElementById('orderBtn').addEventListener('click', function (){
+    alert("Оформить реальный заказ нельзя, так как это лишь работа для портфолио.")
+});
+
 (function () {
     if (!Element.prototype.closest) {
         Element.prototype.closest = function (css) {

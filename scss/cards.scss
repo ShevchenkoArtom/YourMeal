@@ -38,6 +38,12 @@
     background-color: $white;
     border-radius: 12px;
     border: 1px solid #fff;
+    &.isntActive {
+        cursor: auto;
+    }
+    &.isntActive:hover {
+        border: 1px solid #ACACAC;;
+    }
     &:hover {
         border: 1px solid $orange;
     }

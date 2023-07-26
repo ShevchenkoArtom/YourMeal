@@ -20,6 +20,11 @@ $white: #fff;
     background-color: #F2F2F3;
     max-height: 30px;
     border-radius: 8px;
+    &.isntActive {
+        cursor: auto;
+        background: #F2F2F3;
+        color: #ACACAC;
+    }
     &__count {
         padding: 0 10px;
     }
@@ -30,8 +35,27 @@ $white: #fff;
         &:hover {
             background-color: #c6c6c7;
         }
+        &.isntActive {
+            cursor: auto;
+            background: #F2F2F3;
+            color: #ACACAC;
+        }
     }
     .counterPlus {
         border-radius: 0 8px 8px 0;
     }
 }
+// .product {
+//     &Wrap {
+//         &__bottom {
+            // .couner {
+            //     max-height: 40px;
+            //     padding: 9px 12px;
+            //     &Btn {
+            //         padding: 6px 8px;
+            //     }
+            // }
+//         }
+//     }
+// }
+    
