@@ -1,3 +1,4 @@
+// ПОПАПЫ ПОПАПЫ ПОПАПЫ ПОПАПЫ ПОПАПЫ ПОПАПЫ ПОПАПЫ
 const popupLinks = document.querySelectorAll('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = document.querySelectorAll('.lock-padding');
@@ -125,27 +126,163 @@ let tab = function () {
 
 tab();
 
+// НеПолынйФункционал НеПолынйФункционал НеПолынйФункционал 
 document.getElementById('orderBtn').addEventListener('click', function (){
     alert("Оформить реальный заказ нельзя, так как это лишь работа для портфолио.")
 });
 
-(function () {
-    if (!Element.prototype.closest) {
-        Element.prototype.closest = function (css) {
-            var node = this;
-            while (node) {
-                if (node.matches(css)) return node;
-                else node = node.parentElement;
-            }
-            return null;
+// КАУНТЕР
+window.addEventListener('click', function(event) {
+    let counter;
+
+    if (event.target.dataset.action === 'plus' || event.target.dataset.action === 'minus') {
+        const counterWrapper = event.target.closest('.counter');
+        counter = counterWrapper.querySelector('[data-counter');
+    }
+
+    if (event.target.dataset.action === 'plus') {
+        counter.innerText = ++counter.innerText;
+    }
+ 
+
+    if (event.target.dataset.action === 'minus') {
+
+        if (parseInt(counter.innerText) > 1) {
+            counter.innerText = --counter.innerText;
+        } else if (event.target.closest('.cart__middle') && parseInt(counter.innerText) === 1) {
+            event.target.closest('.cart__item').remove();
+
+            toggleCartStatus();
+            calcCartPriceAndDelivery();
+        }
+    }
+
+    if (event.target.hasAttribute('data-action') && event.target.closest('.cart__middle')) {
+        calcCartPriceAndDelivery();
+    }
+});
+
+// добавлениеТовараВКорзину добавлениеТовараВКорзину добавлениеТовараВКорзину 
+const cartWrapper = document.querySelector('.cart__middle');
+window.addEventListener('click', function(event) {
+
+    if (event.target.hasAttribute('data-cart')) {
+        
+        const card = event.target.closest('.productWrap');
+        
+        const productInfo = {
+            id: card.dataset.id,
+            imgSrc: card.querySelector('.productWrap__picture').getAttribute('src'),
+            title: card.querySelector('.productWrap__title').innerText,
+            weight: card.querySelector('._weight').innerText,
+            price: card.querySelector('.productWrap__bottom-price').innerText,
+            counter: card.querySelector('[data-counter]').innerText
         };
+
+        const itemInCart = cartWrapper.querySelector(`[data-id="${productInfo.id}"]`);
+
+        if (itemInCart) {
+            const counterElement = itemInCart.querySelector('[data-counter]');
+            counterElement.innerText = parseInt(counterElement.innerText) + parseInt(productInfo.counter);
+        } else {
+            const cartItemHTML = `
+            <div class="cart__item" data-id="${productInfo.id}">
+                <div class="cart__item-left">
+                    <img src="${productInfo.imgSrc}" alt="${productInfo.title}" class="cart-icon">
+                    <div class="cart__item-info">
+                        <h3 class="cart__item-title">${productInfo.title}</h3>
+                        <p class="cart__item-weight">${productInfo.weight}</p>
+                        <p class="cart__item-price">${productInfo.price}</p>
+                    </div>
+                </div>
+                <div class="counter">
+                    <button class="counterMinus  counterBtn" data-action="minus">-</button>
+                    <p class="counter__count" data-counter>${productInfo.counter}</p>
+                    <button class="counterPlus counterBtn" data-action="plus">+</button>
+                </div>
+            </div>`;
+
+            cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML);
+
+        }
+
+        card.querySelector('[data-counter]').innerText = '1';
+        
+        toggleCartStatus();
+        calcCartPriceAndDelivery ();
     }
-})();
-(function () {
-    if (!Element.prototype.matches) {
-        Element.prototype.matches = Element.prototype.matchesSelector ||
-            Element.prototype.webkitMatchesSelector ||
-            Element.prototype.mozMatchesSelector ||
-            Element.prototype.msMatchesSelector;
+});
+
+
+function toggleCartStatus () {
+    const cartWrapper = document.querySelector('.cart__middle');
+    const cartEmptyBage = document.querySelector('[data-cart-empty]');
+    const orderForm = document.querySelector('.cart__bottom');
+    const cartCounterItems = document.querySelector('.cart__top-subtitle');
+
+    cartCounterItems.innerText = cartWrapper.children.length;
+    if (cartWrapper.children.length > 0) {
+        cartEmptyBage.classList.add("none");
+        orderForm.classList.remove("none");
+    } else {
+        cartEmptyBage.classList.remove("none");
+        orderForm.classList.add("none");
     }
-})();
+};
+
+function calcCartPriceAndDelivery () {
+    const cartItems = document.querySelectorAll('.cart__item');
+    let priceTotal = 0;
+    const totalPrice = document.querySelector('.total__curency');
+
+    cartItems.forEach(function(item) {
+        const emountEl = item.querySelector('[data-counter]').innerText;
+        const priceEl = item.querySelector('.cart__item-price').innerText;
+
+        priceTotal += parseInt(emountEl) * parseInt(priceEl);
+
+    });
+    
+    totalPrice.innerText = priceTotal;
+
+    const freeDelivery = document.querySelector('.delivery');
+    if (priceTotal >= 599) {
+        freeDelivery.classList.remove('none')
+    } else {
+        freeDelivery.classList.add('none')
+    }
+};
+
+
+// window.onresize = function () {
+//     if (window.innerHeight >= 768) {
+//         const cartOpen = document.querySelector('.shopping__cart');
+
+//         cartOpen.addEventListener('click', function () {
+//             console.log('sdfa')
+//         });
+//     }
+// }
+
+
+// ПРОЧЕЕ ПРОЧЕЕПРОЧЕЕПРОЧЕЕПРОЧЕЕПРОЧЕЕПРОЧЕЕПРОЧЕЕ
+// (function () {
+//     if (!Element.prototype.closest) {
+//         Element.prototype.closest = function (css) {
+//             var node = this;
+//             while (node) {
+//                 if (node.matches(css)) return node;
+//                 else node = node.parentElement;
+//             }
+//             return null;
+//         };
+//     }
+// })();
+// (function () {
+//     if (!Element.prototype.matches) {
+//         Element.prototype.matches = Element.prototype.matchesSelector ||
+//             Element.prototype.webkitMatchesSelector ||
+//             Element.prototype.mozMatchesSelector ||
+//             Element.prototype.msMatchesSelector;
+//     }
+// })();

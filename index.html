@@ -57,68 +57,23 @@
                         <div class="shopping__cart close">
                             <div class="cart__top">
                                 <h2 class="cart__top-title">Корзина</h2>
-                                <p class="cart__top-subtitle">4</p>
+                                <p class="cart__top-subtitle">0</p>
                             </div>
-                            <div class="cards__body">
+                            <div class="cards__body-cart">
                                 <div class="cart__middle">
-                                    <div class="cart__item">
-                                        <div class="cart__item-left">
-                                            <img src="./img/cards/burgers/meetBomb.jpg" alt="meetBomb" class="cart-icon">
-                                            <div class="cart__item-info">
-                                                <h3 class="cart__item-title">Супер сырный</h3>
-                                                <p class="cart__item-weight">512г</p>
-                                                <p class="cart__item-price">550₽</p>
-                                            </div>
-                                        </div>
-                                        <div class="counter">
-                                            <button class="counterMinus counterBtn">-</button>
-                                            <p class="counter__count">1</p>
-                                            <button class="counterPlus counterBtn">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="cart__item">
-                                        <div class="cart__item-left">
-                                            <img src="./img/cards/burgers/meetBomb.jpg" alt="meetBomb" class="cart-icon">
-                                            <div class="cart__item-info">
-                                                <h3 class="cart__item-title">Супер сырный</h3>
-                                                <p class="cart__item-weight">512г</p>
-                                                <p class="cart__item-price">550₽</p>
-                                            </div>
-                                        </div>
-                                        <div class="counter">
-                                            <button class="counterMinus counterBtn">-</button>
-                                            <p class="counter__count">1</p>
-                                            <button class="counterPlus counterBtn">+</button>
-                                        </div>
-                                    </div>
-                                    <div class="cart__item">
-                                        <div class="cart__item-left">
-                                            <img src="./img/cards/burgers/meetBomb.jpg" alt="meetBomb" class="cart-icon">
-                                            <div class="cart__item-info">
-                                                <h3 class="cart__item-title">Супер сырный</h3>
-                                                <p class="cart__item-weight">512г</p>
-                                                <p class="cart__item-price">550₽</p>
-                                            </div>
-                                        </div>
-                                        <div class="counter">
-                                            <button class="counterMinus counterBtn">-</button>
-                                            <p class="counter__count">1</p>
-                                            <button class="counterPlus counterBtn">+</button>
-                                        </div>
-                                    </div>
                                 </div>
-                                <div class="cart__bottom">
+                                <div class="cart__bottom none">
                                     <div class="cart__price">
                                         <p class="cart__bottom-result">Итого</p>
-                                        <p class="cart__bottom-price">1279<span>₽</span></p>
+                                        <p class="cart__bottom-price"><span class="total__curency">0</span><span>₽</span></p>
                                     </div>
                                     <a href="#deliveryPopup" class="orderBtn popup-link">Оформить заказ</a>
-                                    <div class="delivery">
+                                    <div class="delivery none">
                                         <p class="freeDelivery">Бесплатная доставка</p>
                                         <p class="close">Свернуть</p>
                                     </div>
                                 </div>
-                                <div class="emptyCart">
+                                <div class="emptyCart" data-cart-empty>
                                     <p>Тут пока пусто :(</p>
                                 </div>
                             </div>
@@ -347,7 +302,7 @@
                             <use href="./img/sprite.svg#close" />
                         </svg>
                     </a>
-                    <div class="productWrap">
+                    <div class="productWrap" data-id="burger1">
                         <h2 class="productWrap__title">Мясная бомба</h2>
                         <div class="productWrap__middle">
                             <img src="./img/cards/burgers/meetBomb.jpg" alt="meetBomb" class="productWrap__picture">
@@ -366,11 +321,11 @@
                         </div>
                         <div class="productWrap__bottom">
                             <div class="productWrap__bottom-l">
-                                <button class="orangeBtn">Добавить</button>
+                                <button data-cart class="orangeBtn">Добавить</button>
                                 <div class="counter">
-                                    <button class="counterMinus counterBtn">-</button>
-                                    <p class="counter__count">1</p>
-                                    <button class="counterPlus counterBtn">+</button>
+                                    <button class="counterMinus  counterBtn" data-action="minus">-</button>
+                                    <p class="counter__count" data-counter>1</p>
+                                    <button class="counterPlus counterBtn" data-action="plus">+</button>
                                 </div>
                             </div>
                             <div class="productWrap__bottom-r">
@@ -389,7 +344,7 @@
                             <use href="./img/sprite.svg#close" />
                         </svg>
                     </a>
-                    <div class="productWrap">
+                    <div class="productWrap" data-id="burger2">
                         <h2 class="productWrap__title">Супер сырный</h2>
                         <div class="productWrap__middle">
                             <img src="./img/cards/burgers/superCheese.jpg" alt="meetBomb" class="productWrap__picture">
@@ -408,15 +363,15 @@
                         </div>
                         <div class="productWrap__bottom">
                             <div class="productWrap__bottom-l">
-                                <button class="orangeBtn">Добавить</button>
+                                <button data-cart class="orangeBtn">Добавить</button>
                                 <div class="counter">
-                                    <button class="counterMinus counterBtn">-</button>
-                                    <p class="counter__count">1</p>
-                                    <button class="counterPlus counterBtn">+</button>
+                                    <button class="counterMinus counterBtn" data-action="minus">-</button>
+                                    <p class="counter__count" data-counter>1</p>
+                                    <button class="counterPlus counterBtn" data-action="plus">+</button>
                                 </div>
                             </div>
                             <div class="productWrap__bottom-r">
-                                <p class="productWrap__bottom-price">550₽</p>
+                                <p class="productWrap__bottom-price">550</p><span>₽</span>
                             </div>
                         </div>
                     </div>
@@ -848,7 +803,7 @@
             </div>
         </div>
     </div>
-    <div id="undefind" class="product deliveryPopup popup open">
+    <div id="undefind" class="product deliveryPopup popup">
         <div class="deliveryPopup__body">
             <div class="deliveryPopup__content product__content popup__content">
                 <a href="#" class="close__popup">
